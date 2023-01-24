@@ -3,9 +3,16 @@ import './Book.css';
 import { Link } from 'react-router-dom';
 
 function Book({
-  book: { title, total_pages: totalPages, rating, isbn, published_date: publishedDate, authors },
+  book: {
+    title,
+    book_id,
+    total_pages: totalPages,
+    rating,
+    isbn,
+    published_date: publishedDate,
+    authors,
+  },
   showDetail = false,
-  book_id,
 }) {
   return (
     <article className="book">
