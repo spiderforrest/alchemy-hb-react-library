@@ -1,13 +1,16 @@
 import BookList from './components/book/BookList';
 import BookDetail from './components/book/BookDetail';
 import './App.css';
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Redirect, Link } from 'react-router-dom';
 
 function App() {
   return (
     <BrowserRouter>
       <main className="container">
-        <h1>Library Catalog</h1>
+        <Link to="/catalog">
+          {' '}
+          <h1>Library Catalog</h1>{' '}
+        </Link>
         <Switch>
           <Route exact path="/catalog">
             <BookList />
